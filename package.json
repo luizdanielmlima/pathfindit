@@ -6,10 +6,14 @@
   "scripts": {
     "deploy": "gh-pages -d dist"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luizdanielmlima/pathfindit.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "pathfinding": "git+https://github.com/luizdanielmlima/pathfindit",
+  "pathfinding": "git+https://github.com/qiao/PathFinding.js.git",
   "homepage": "https:/luizdanielmlima.github.io/pathfindit",
   "dependencies": {
     "gh-pages": "^2.0.1"
