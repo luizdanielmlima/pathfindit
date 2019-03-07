@@ -6,6 +6,16 @@ let wallsGroup;
 let animDotsGroup;
 const TILESIZE = 16;
 let feedbackEl;
+let title;
+let titleAlternatives = [
+  "John, find the well!",
+  "C´mon man, move!",
+  "John, be brave!",
+  "Don´t be afraid John!",
+  "Hey, you got this",
+  "Keep trying dude!",
+  "Don´t give up!"
+];
 let animDotsInterval;
 let isAnimatingDots = false;
 let numOfDots = 0;
@@ -13,7 +23,7 @@ let numOfDots = 0;
 window.onload = function() {
   // console.log("window.onload()");
   feedbackEl = document.getElementById("feedback");
-
+  title = document.getElementById("title");
   drawCanvasAndMap();
   drawHeroAndWell();
   getMatrixData();
@@ -94,6 +104,8 @@ function clearElements() {
       wallsRef.remove();
     }
   }
+  let rn = Math.floor(Math.random() * titleAlternatives.length);
+  title.innerHTML = titleAlternatives[rn];
 }
 
 function randomizeMatrix() {
@@ -120,6 +132,7 @@ function setPathFinding() {
     drawWayFinding(pathCalc);
   } else {
     //no path solution!
+    title.innerHTML = "No soup for you !!";
     feedbackEl.style.opacity = 1;
   }
 }

@@ -13,6 +13,14 @@ body {
   flex-direction: column;
 }
 
+.header {
+  background-color: #222;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  justify-items: center;
+}
+
 h1 {
   display: block;
 }
