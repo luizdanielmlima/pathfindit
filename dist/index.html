@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Press+Start+2P"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Path Find It! A pathfinding playground</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <h3></h3>
+          <span><img id="hero" src="./assets/tile_hero.png" alt="hero" style="width:32px"/></span
+          >  John, find the well !  <span
+            ><img id="well" src="./assets/tile_target.png" alt="well" style="width:32px"
+          /></span>
+        </h3>
+      </div>
+      <br />
+      <button onclick="getMatrixData()">randomize!</button>
+      <br />
+      <canvas id="myCanvas" width="640" height="640"></canvas>
+      <h4 id="feedback">No solution found!</h4>
+    </div>
+    <div class="img-placeholders">
+      <img
+        id="mapa"
+        src="./assets/background_00.png"
+        alt="game map"
+        style="display: none;"
+      />
+      <img
+        id="hero"
+        src="./assets/tile_hero.png"
+        alt="hero"
+        style="display: none;"
+      />
+      <img
+        id="well"
+        src="./assets/tile_target.png"
+        alt="well"
+        style="display: none;"
+      />
+      <img
+        id="grass"
+        src="./assets/tile_grass_00.png"
+        alt="grass"
+        style="display: none;"
+      />
+      <img
+        id="wall"
+        src="./assets/tile_wall_00.png"
+        alt="wall"
+        style="display: none;"
+      />
+    </div>
+    <footer>
+      <p>Path Finding Project by Luiz Daniel Lima. Get the code on my <span><a  href="https://github.com/luizdanielmlima"
+        >Github!</a
+      ></span></p>
+
+    </footer>
+  </body>
+
+  <script
+    type="text/javascript"
+    src="./pathfinding/pathfinding-browser.js"
+  ></script>
+  <script type="text/javascript" src="./paperjs/paper-full.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.11.5/paper-full.js"></script> -->
+  <script type="text/javascript" src="main.js" canvas="myCanvas"></script>
+</html>
