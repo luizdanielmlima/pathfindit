@@ -7,6 +7,7 @@ let animDotsGroup;
 const TILESIZE = 16;
 let feedbackEl;
 let title;
+let btnRandom;
 let titleAlternatives = [
   "John, find the well!",
   "C´mon man, move!",
@@ -24,6 +25,8 @@ window.onload = function() {
   // console.log("window.onload()");
   feedbackEl = document.getElementById("feedback");
   title = document.getElementById("title");
+  btnRandom = document.getElementById("rnd-bt");
+  btnRandom.addEventListener("click", getMatrixData);
   drawCanvasAndMap();
   drawHeroAndWell();
   getMatrixData();
@@ -116,6 +119,10 @@ function randomizeMatrix() {
     matrix[randomX][randomY] = 1;
   }
   matrix[0][0] = 0;
+  matrix[0][1] = 0;
+  matrix[1][0] = 0;
+  matrix[38][39] = 0;
+  matrix[39][38] = 0;
   matrix[39][39] = 0;
 }
 
@@ -178,13 +185,13 @@ function startDotsAnim() {
 
     animDotsInterval = setInterval(function() {
       // console.log(`counter:${counter}`);
-      animDotsRef.children[counter].opacity = 1;
+      animDotsRef.children[counter].opacity = 0.7;
       if (counter == counterLimit) {
         //last point, stop the animation!
         clearInterval(animDotsInterval);
       }
       counter++;
-    }, 10);
+    }, 5);
   }
 }
 

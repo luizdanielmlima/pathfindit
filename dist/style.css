@@ -29,6 +29,14 @@ h1 {
   width: 100%;
 }
 
+#rnd-bt {
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+
 #feedback {
   color: lightcoral;
 }
