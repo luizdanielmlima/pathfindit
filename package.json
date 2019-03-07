@@ -9,7 +9,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "pathfinding": "git+https://github.com/qiao/PathFinding.js.git",
+  "pathfinding": "git+https://github.com/luizdanielmlima/pathfindit",
   "homepage": "https:/luizdanielmlima.github.io/pathfindit",
   "dependencies": {
     "gh-pages": "^2.0.1"
